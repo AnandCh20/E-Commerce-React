@@ -16,7 +16,7 @@
 
 .sidebar-container {
   flex: 1 1 25%; /* Sidebar takes 25% of the container width */
-  max-width: 25%; /* Set maximum width for sidebar */
+  max-width: fit-content; /* Set maximum width for sidebar */
   background-color: #524f4f; /* Example background color */
   padding: 20px;
   order: 2; /* Place it on the right side */
@@ -27,19 +27,24 @@
 @media (max-width: 600px) {
   .app-container {
     flex-direction: row;
+    max-width: 80rem;
+    width: 100%;
+    margin: 2px; /* Center content horizontally */
+    padding: 2px; /* Add padding for spacing */
   }
 
   .sidebar-container {
-    flex: 1 1 30%;
-    max-width: 30%;
+    flex: 1 1 20%;
+    max-width: 20%;
     order: 1;
     margin-bottom: 1rem;
     padding: 1px;
   }
 
   .content-container {
-    flex: 1 1 70%;
-    max-width: 70%;
+    flex: 1 1 80%;
+    max-width: 80%;
+    padding: 2px;
     order: 2;
   }
 }
