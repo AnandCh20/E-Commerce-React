@@ -1,0 +1,45 @@
+.app-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to new rows */
+  max-width: 100rem;
+  width: 100%;
+  margin: auto; /* Center content horizontally */
+  padding: 1rem; /* Add padding for spacing */
+}
+
+.content-container {
+  flex: 1 1 70%; /* Content container takes 70% of the container width */
+  max-width: 100%; /* Ensure content does not exceed 100% of its container */
+  padding: 20px;
+  order: 1; /* Place it on the left side */
+}
+
+.sidebar-container {
+  flex: 1 1 25%; /* Sidebar takes 25% of the container width */
+  max-width: 25%; /* Set maximum width for sidebar */
+  background-color: #524f4f; /* Example background color */
+  padding: 20px;
+  order: 2; /* Place it on the right side */
+  border-radius: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .app-container {
+    flex-direction: row;
+  }
+
+  .sidebar-container {
+    flex: 1 1 30%;
+    max-width: 30%;
+    order: 1;
+    margin-bottom: 1rem;
+    padding: 1px;
+  }
+
+  .content-container {
+    flex: 1 1 70%;
+    max-width: 70%;
+    order: 2;
+  }
+}
