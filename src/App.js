@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Cards from "./components/Cards";
 import SideBar from "./components/SideBar";
+import NavBar from "./components/NavBar";
 import "./App.css"; // Import the CSS file for any additional styling
 
 const App = () => {
@@ -21,6 +22,8 @@ const App = () => {
   };
 
   return (
+    <div> 
+    <NavBar/>
     <div className="app-container">
    
       <div className="content-container">
@@ -33,6 +36,7 @@ const App = () => {
       </div>
       
     </div>
+    </div>  
   );
 };
 
