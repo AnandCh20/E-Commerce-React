@@ -15,15 +15,16 @@ const Cart = ({ cartItems, removeFromCart }) => {
             {cartItems.map((item) => (
               <li key={item.id} className="cart-item">
                 <div className="cart-item-details">
-                  <span className="cart-item-title">{item.title}</span>
-                  <span className="cart-item-price">${item.price}</span>
+                  <p className="cart-item-title">{item.title} | ₹{item.price}   </p>
                 </div>
+                
                 <button
                   className="removebtn"
                   onClick={() => removeFromCart(item.id)}
                 >
-                  ⛔
+                ⛔
                 </button>
+
               </li>
             ))}
           </ul>
