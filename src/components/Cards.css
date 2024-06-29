@@ -57,7 +57,7 @@
   }
   
   .card {
-    width: 15rem; /* Adjust width as per your design */
+    width: fit-content; /* Adjust width as per your design */
     margin: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
